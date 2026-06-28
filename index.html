@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anka Aura Digital | Premium Marketing by Nisha Chowdhary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --cream: #FAF7F2;
+            --white: #FFFFFF;
+            --charcoal: #222222;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.7;
+        }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+        nav {
+            padding: 2rem 4%; display: flex; justify-content: space-between; align-items: center;
+            background: var(--white); border-bottom: 1px solid rgba(212,175,55,0.2);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-size: 1.8rem; letter-spacing: 4px; color: var(--charcoal); text-decoration: none; font-weight: bold; }
+        .logo span { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: normal; text-transform: lowercase; font-size: 1.4rem; letter-spacing: 1px;}
+        .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--charcoal); font-size: 0.9rem; letter-spacing: 1px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+        .hero { padding: 8rem 4%; text-align: center; background: var(--white); }
+        .hero h1 { font-size: 3.5rem; max-width: 800px; margin: 0 auto 1.5rem; line-height: 1.2; }
+        .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 2.5rem; color: #555; }
+        .cta-btn {
+            display: inline-block; padding: 1rem 2.5rem; background: var(--charcoal); color: var(--white);
+            text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase;
+            transition: 0.3s; border: 1px solid var(--charcoal); text-align: center;
+        }
+        .cta-btn:hover { background: transparent; color: var(--charcoal); border-color: var(--charcoal); }
+        .section-title { text-align: center; font-size: 2.8rem; margin-bottom: 3rem; position: relative; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 1px; background: var(--gold); margin: 1rem auto 0; }
+        .container { padding: 6rem 4%; max-width: 1200px; margin: 0 auto; }
+        
+        /* Pricing Bundle Layout */
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .price-card { background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 3rem 2rem; display: flex; flex-direction: column; justify-content: space-between; transition: 0.4s ease; position: relative; }
+        .price-card.featured { border: 2px solid var(--gold); transform: scale(1.03); }
+        .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--white); font-size: 0.75rem; padding: 0.3rem 1rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
+        .price-card h3 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .price-card .post-count { font-size: 0.9rem; color: #777; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .price-card .cost { font-size: 2.5rem; font-family: 'Cormorant Garamond', serif; font-weight: bold; color: var(--charcoal); margin-bottom: 1.5rem; }
+        .price-card .cost span { font-size: 1rem; text-decoration: line-through; color: #999; margin-left: 0.5rem; font-weight: normal; }
+        .price-features { list-style: none; margin-bottom: 2.5rem; text-align: left; font-size: 0.95rem; }
+        .price-features li { margin-bottom: 0.8rem; position: relative; padding-left: 1.5rem; }
+        .price-features li::before { content: '✓'; color: var(--gold); position: absolute; left: 0; font-weight: bold; }
+        .bundle-btn { display: block; width: 100%; padding: 0.8rem; background: var(--charcoal); color: var(--white); text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; text-align: center; transition: 0.3s; }
+        .price-card.featured .bundle-btn { background: var(--gold); }
+        .price-card.featured .bundle-btn:hover { background: var(--charcoal); }
+        .bundle-btn:hover { background: var(--gold); }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
+        .service-card { background: var(--white); padding: 3rem 2rem; border: 1px solid rgba(0,0,0,0.05); transition: 0.4s; }
+        .service-card:hover { border-color: var(--gold); }
+        .service-card .num { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); font-style: italic; margin-bottom: 1rem; display: block; }
+        .service-card h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+        
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .portfolio-item { background: var(--white); overflow: hidden; border: 1px solid rgba(0,0,0,0.05); }
+        .portfolio-img { width: 100%; height: 250px; object-fit: cover; transition: 0.5s; }
+        .portfolio-item:hover .portfolio-img { transform: scale(1.02); }
+        .portfolio-info { padding: 1.5rem; }
+        .portfolio-info h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 0.5rem; }
+        .portfolio-info p { font-size: 0.85rem; color: #666; }
+        
+        .about-block { display: flex; align-items: center; gap: 4rem; background: var(--white); border: 1px solid rgba(0,0,0,0.05); }
+        .about-text { padding: 4rem; flex: 1; }
+        .about-img { flex: 1; width: 50%; height: 500px; object-fit: cover; }
+        
+        .contact-box { background: var(--white); padding: 4rem; text-align: center; border: 1px solid rgba(212,175,55,0.3); }
+        .contact-links { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; font-size: 1.1rem; }
+        .contact-links a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 0.2rem; transition: 0.3s; }
+        .contact-links a:hover { color: var(--gold); }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .about-block { flex-direction: column; }
+            .about-img { width: 100%; height: 300px; }
+            .about-text { padding: 2rem; }
+            .contact-links { flex-direction: column; gap: 1rem; }
+            .price-card.featured { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">AA <span>digital</span></a>
+        <div class="nav-links">
+            <a href="#bundles">Ready Bundles</a>
+            <a href="#services">Custom Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">Our Story</a>
+            <a href="#contact">Inquire</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Let’s grow your business online—the right way.</h1>
+        <p>Hi, I’m Nisha Chowdhary. I help business owners build a beautiful online presence, get found by real clients, and bring in consistent sales through smart, stress-free digital marketing.</p>
+        <a href="#bundles" class="cta-btn">Browse Ready Bundles</a>
+    </header>
+
+    <section id="bundles" class="container" style="text-align: center;">
+        <h2 class="section-title">Packers & Movers Content Bundles</h2>
+        <p style="max-width: 700px; margin: -1.5rem auto 3rem; color: #666;">Stop stressing over what to post on Instagram and Facebook. Get custom-made, premium social media bundles covering every service line you offer to win trust and book relocations.</p>
+        
+        <div class="price-grid">
+            <div class="price-card">
+                <div>
+                    <h3>Essential Sampler</h3>
+                    <div class="post-count">28 Total Ready Posts</div>
+                    <div class="cost">₹299 <span>₹999</span></div>
+                    <ul class="price-features">
+                        <li><strong>Covers ALL 14 Shifting Topics</strong></li>
+                        <li>Strictly Limited to 2 Posts per topic</li>
+                        <li>Includes Home, Cars, Bikes & Office lines</li>
+                        <li>Pre-written Caption Outlines</li>
+                        <li>Perfect to test design consistency</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/917861842159?text=Hi%20Nisha,%20I%20want%20to%20buy%20the%20Essential%20Sampler%20Moving%20Bundle%20for%20Rs%20299" class="bundle-btn" target="_blank">Get Package 1</a>
+            </div>
+
+            <div class="price-card featured">
+                <span class="badge">Best Value</span>
+                <div>
+                    <h3>Business Growth</h3>
+                    <div class="post-count">70 Total Ready Posts</div>
+                    <div class="cost">₹499 <span>₹1,999</span></div>
+                    <ul class="price-features">
+                        <li><strong>Covers ALL 14 Shifting Topics</strong></li>
+                        <li>Expanded to 5 Posts per topic</li>
+                        <li>Deep mix of home, vehicles & corporate</li>
+                        <li>Includes educational tips & local tags</li>
+                        <li>Great balance for multi-service feeds</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/917861842159?text=Hi%20Nisha,%20I%20want%20to%20buy%20the%20Business%20Growth%20Moving%20Bundle%20for%20Rs%20499" class="bundle-btn" target="_blank">Get Package 2</a>
+            </div>
+
+            <div class="price-card">
+                <div>
+                    <h3>Ultimate Master Vault</h3>
+                    <div class="post-count">140+ Complete Vault</div>
+                    <div class="cost">₹999 <span>₹3,499</span></div>
+                    <ul class="price-features">
+                        <li><strong>Covers ALL 14 Shifting Topics</strong></li>
+                        <li>Full Unrestricted Access (10 Posts per topic)</li>
+                        <li>Unlocks complex corporate & medical moves</li>
+                        <li>Complete caption sheets & engagement strategy</li>
+                        <li><strong>FREE BONUS:</strong> Printable Moving Day Checklist Lead Magnet</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/917861842159?text=Hi%20Nisha,%20I%20want%20to%20buy%20the%20Ultimate%20Master%20Moving%20Vault%20for%20Rs%20999" class="bundle-btn" target="_blank">Get Package 3</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="container">
+        <h2 class="section-title">Custom Marketing Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="num">01 //</span>
+                <h3>Advertising & Leads</h3>
+                <p>Stop throwing money at random ads. Whether you need your very first ad account set up correctly, or you want complete management of your Google and Meta campaigns, I've got you covered.</p>
+            </div>
+            <div class="service-card">
+                <span class="num">02 //</span>
+                <h3>Digital Setup & Legals</h3>
+                <p>Get found locally without the headache. I handle your Google My Business (GMB) map layout setup and take care of your Udhyam Aadhaar business registration smoothly.</p>
+            </div>
+            <div class="service-card">
+                <span class="num">03 //</span>
+                <h3>Design & Socials</h3>
+                <p>Your brand needs to look trustworthy. I handle complete social media page styling, custom attention-grabbing post graphics, unique logo creation, and sleek website design.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="container" style="background: rgba(255,255,255,0.5);">
+        <h2 class="section-title">Recent Work & Case Previews</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80" alt="Website Design" class="portfolio-img">
+                <div class="portfolio-info">
+                    <h4>Bespoke Corporate Website</h4>
+                    <p>Clean design, custom graphics, and smooth mobile structure built for a service brand.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=600&q=80" alt="Google Ads Results" class="portfolio-img">
+                <div class="portfolio-info">
+                    <h4>High-ROI Lead Generation Campaign</h4>
+                    <p>Complete ad account setup and maintenance resulting in a 4x reduction in cost-per-lead.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?auto=format&fit=crop&w=600&q=80" alt="Moving Niche Templates" class="portfolio-img">
+                <div class="portfolio-info">
+                    <h4>Packers & Movers Content Kit</h4>
+                    <p>An aesthetic social media bundle showing visual consistency and trust metrics for moving companies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="about-block">
+            <div class="about-text">
+                <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">The Heart Behind the Agency</h2>
+                <p style="margin-bottom: 1rem;">Anka Aura Digital isn’t just a regular marketing firm—it’s a deeply personal passion project. I named this agency to honor the most important support systems in my life: my husband, Ankit, and my best friend, Aanishka.</p>
+                <p>When you work with me, you aren't dealing with a cold, faceless agency. You are partnering directly with me, Nisha. My goal is to take the digital stress off your plate, giving your business the exact same love, honesty, and dedicated growth that I give to my own family.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Aesthetic Studio Workspace" class="about-img">
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <div class="contact-box">
+            <h2 style="font-size: 3rem; margin-bottom: 1rem;">Let's Build Something Beautiful</h2>
+            <p>Ready to claim your Packers & Movers post bundle or start a custom campaign? Get in touch directly.</p>
+            <div class="contact-links">
+                <a href="tel:7861842159">Call: +91 7861842159</a>
+                <a href="https://wa.me/917861842159" target="_blank">WhatsApp Chat</a>
+                <a href="mailto:offiialwork7676@gmail.com">Email: officiialwork7676@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
