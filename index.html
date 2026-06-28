@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anka Aura Digital | Bold Marketing by Nisha Chowdhary</title>
+    <title>Anka Aura Digital | Premium Marketing by Nisha Chowdhary</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -11,6 +11,7 @@
         :root {
             --primary-grad: linear-gradient(135deg, #FFD043 0%, #FF9900 100%);
             --dark-grad: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+            --book-grad-1: linear-gradient(135deg, #4G4G4G 0%, #111111 100%);
             --yellow-light: #FFF8E5;
             --white: #FFFFFF;
             --dark: #111111;
@@ -27,122 +28,115 @@
         }
         h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
         
-        /* Playful Floating Background Blobs */
+        /* Background decorative glow */
         body::before {
             content: ''; position: absolute; width: 400px; height: 400px;
-            background: rgba(255, 208, 67, 0.25); filter: blur(100px);
+            background: rgba(255, 208, 67, 0.2); filter: blur(100px);
             border-radius: 50%; top: -100px; right: -100px; z-index: -1;
         }
-        body::after {
-            content: ''; position: absolute; width: 500px; height: 500px;
-            background: rgba(255, 153, 0, 0.15); filter: blur(120px);
-            border-radius: 50%; top: 800px; left: -200px; z-index: -1;
-        }
 
-        /* Floating Nav bar */
+        /* Nav Bar */
         nav {
             margin: 1.5rem 4%; padding: 1rem 2.5rem; 
             display: flex; justify-content: space-between; align-items: center;
-            background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px);
             border-radius: 50px; box-shadow: 0 8px 32px rgba(0,0,0,0.04);
             position: sticky; top: 1.5rem; z-index: 100;
             border: 1px solid rgba(255,255,255,0.6);
         }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--dark); text-decoration: none; letter-spacing: -0.5px; display: flex; align-items: center; gap: 4px; }
-        .logo span { background: var(--primary-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.6rem; }
-        .nav-links a { margin-left: 1.8rem; text-decoration: none; color: var(--dark); font-size: 0.9rem; font-weight: 600; transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .nav-links a:hover { color: #FF9900; transform: translateY(-2px); display: inline-block; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--dark); text-decoration: none; display: flex; align-items: center; gap: 4px; }
+        .logo span { background: var(--primary-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links a { margin-left: 1.8rem; text-decoration: none; color: var(--dark); font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: #FF9900; }
         
-        /* Hero Section */
-        .hero { padding: 8rem 4% 6rem; text-align: center; position: relative; }
-        .hero h1 { font-size: 4rem; max-width: 900px; margin: 0 auto 1.5rem; line-height: 1.1; letter-spacing: -1px; }
+        /* Hero */
+        .hero { padding: 7rem 4% 5rem; text-align: center; }
+        .hero h1 { font-size: 3.8rem; max-width: 900px; margin: 0 auto 1.5rem; line-height: 1.15; letter-spacing: -1px; }
         .hero h1 span { background: var(--primary-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero p { font-size: 1.2rem; max-width: 650px; margin: 0 auto 2.5rem; color: #444; font-weight: 500; }
         
-        /* Interactive Buttons */
         .cta-btn {
             display: inline-block; padding: 1.2rem 3rem; background: var(--dark-grad); color: var(--white);
             text-decoration: none; font-size: 1rem; font-weight: 700; border-radius: 50px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.15); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .cta-btn:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 15px 30px rgba(255, 153, 0, 0.3); background: var(--primary-grad); color: var(--dark); }
+        .cta-btn:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(255, 153, 0, 0.3); background: var(--primary-grad); color: var(--dark); }
         
         .section-title { text-align: center; font-size: 3rem; margin-bottom: 1rem; letter-spacing: -1px; }
         .section-subtitle { text-align: center; color: #555; max-width: 700px; margin: 0 auto 4rem; font-size: 1.1rem; font-weight: 500; }
-        .container { padding: 6rem 4%; max-width: 1200px; margin: 0 auto; }
+        .container { padding: 5rem 4%; max-width: 1200px; margin: 0 auto; }
         
-        /* Playful Pricing Cards */
-        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
-        .price-card { background: var(--white); border-radius: var(--radius-playful); padding: 3.5rem 2.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.02); border: 2px solid transparent; }
-        .price-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: rgba(0,0,0,0.03); }
-        .price-card.featured { background: var(--dark-grad); color: var(--white); transform: scale(1.05); box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
-        .price-card.featured:hover { transform: translateY(-12px) scale(1.05); }
-        .price-card.featured .cost { color: #FFF; }
-        .price-card.featured .post-count { color: #FFD043; background: rgba(255,208,67,0.1); }
+        /* Pricing Grid and marketer-style Book Layout */
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; margin-top: 3rem; }
+        .price-card { background: var(--white); border-radius: var(--radius-playful); padding: 3rem 2.2rem; display: flex; flex-direction: column; justify-content: space-between; transition: 0.4s; box-shadow: 0 10px 40px rgba(0,0,0,0.03); position: relative; border: 1px solid rgba(0,0,0,0.05); }
+        .price-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
         
-        /* Badges & Accents */
-        .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-grad); color: var(--dark); font-size: 0.8rem; font-weight: 800; padding: 0.5rem 1.5rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 5px 15px rgba(255,153,0,0.4); }
-        .price-card h3 { font-size: 2.2rem; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
-        .post-count { display: inline-block; font-size: 0.8rem; font-weight: 700; color: #FF9900; background: var(--yellow-light); padding: 0.4rem 1rem; border-radius: 50px; margin-bottom: 2rem; text-transform: uppercase; }
-        .price-card .cost { font-size: 3.5rem; font-weight: 800; color: var(--dark); margin-bottom: 2rem; display: flex; align-items: baseline; gap: 8px; }
+        /* 3D Marketer Digital Book Layout Design */
+        .book-container { display: flex; justify-content: center; margin-bottom: 2rem; perspective: 1000px; }
+        .digital-book { width: 140px; height: 190px; background: var(--dark-grad); border-radius: 4px 16px 16px 4px; box-shadow: -8px 12px 24px rgba(0,0,0,0.25); position: relative; transform: rotateY(-15deg); transform-style: preserve-3d; display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem 1rem; color: white; text-align: left; border-left: 5px solid #FF9900; }
+        .price-card.featured .digital-book { background: linear-gradient(135deg, #FF9900 0%, #FFD043 100%); color: #111; border-left: 5px solid #111; }
+        .book-badge { font-size: 0.65rem; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; color: #FF9900; }
+        .price-card.featured .book-badge { color: #111; }
+        .book-title { font-size: 1.1rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; line-height: 1.2; margin-top: 0.5rem; }
+        .book-footer { font-size: 0.65rem; font-weight: 700; opacity: 0.8; text-transform: uppercase; }
+
+        .price-card.featured { border: 2.5px solid #FF9900; }
+        .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-grad); color: var(--dark); font-size: 0.8rem; font-weight: 800; padding: 0.5rem 1.5rem; border-radius: 50px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(255,153,0,0.3); }
+        
+        .price-card h3 { font-size: 2rem; margin-bottom: 0.3rem; letter-spacing: -0.5px; text-align: center; }
+        .post-count { text-align: center; font-size: 0.85rem; font-weight: 700; color: #FF9900; margin-bottom: 1.5rem; text-transform: uppercase; }
+        
+        .price-card .cost { font-size: 3.2rem; font-weight: 800; color: var(--dark); margin-bottom: 1.8rem; display: flex; align-items: baseline; justify-content: center; gap: 8px; }
         .price-card .cost span { font-size: 1.2rem; text-decoration: line-through; color: #888; font-weight: 500; }
         
-        .price-features { list-style: none; margin-bottom: 3rem; text-align: left; }
-        .price-features li { margin-bottom: 1rem; position: relative; padding-left: 2rem; font-weight: 500; font-size: 1rem; }
-        .price-features li::before { content: '⚡'; position: absolute; left: 0; top: 2px; }
-        .price-card.featured .price-features li::before { content: '🔥'; }
+        .price-features { list-style: none; margin-bottom: 2.5rem; text-align: left; border-top: 1px solid #EEE; padding-top: 1.5rem; }
+        .price-features li { margin-bottom: 0.9rem; position: relative; padding-left: 1.8rem; font-weight: 500; font-size: 0.95rem; color: #333; }
+        .price-features li::before { content: '✓'; position: absolute; left: 0; color: #FF9900; font-weight: bold; font-size: 1.1rem; }
         
-        .bundle-btn { display: block; width: 100%; padding: 1.2rem; background: var(--yellow-light); color: #FF9900; text-decoration: none; font-weight: 700; border-radius: 50px; text-align: center; transition: 0.3s; font-size: 0.95rem; }
-        .bundle-btn:hover { background: var(--primary-grad); color: var(--dark); transform: scale(1.02); }
-        .price-card.featured .bundle-btn { background: var(--primary-grad); color: var(--dark); }
-        .price-card.featured .bundle-btn:hover { background: var(--white); color: var(--dark); }
+        .bundle-btn { display: block; width: 100%; padding: 1.1rem; background: var(--dark-grad); color: var(--white); text-decoration: none; font-weight: 700; border-radius: 50px; text-align: center; transition: 0.3s; font-size: 0.95rem; }
+        .bundle-btn:hover { background: var(--primary-grad); color: var(--dark); }
+        .price-card.featured .bundle-btn { background: var(--primary-grad); color: var(--dark); box-shadow: 0 8px 20px rgba(255,153,0,0.2); }
+        .price-card.featured .bundle-btn:hover { background: var(--dark-grad); color: var(--white); }
 
-        /* Service Cards Grid */
+        /* Custom Services */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
-        .service-card { background: var(--white); padding: 4rem 2.5rem; border-radius: var(--radius-playful); box-shadow: 0 10px 40px rgba(0,0,0,0.02); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden; }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
-        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--primary-grad); opacity: 0; transition: 0.3s; }
-        .service-card:hover::before { opacity: 1; }
-        .service-card .icon { font-size: 3rem; margin-bottom: 1.5rem; display: block; }
-        .service-card h3 { font-size: 1.8rem; margin-bottom: 1rem; letter-spacing: -0.5px; }
-        .service-card p { color: #555; font-weight: 500; }
+        .service-card { background: var(--white); padding: 3.5rem 2.5rem; border-radius: var(--radius-playful); box-shadow: 0 10px 40px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.04); }
+        .service-card .icon { font-size: 2.8rem; margin-bottom: 1.5rem; display: block; }
+        .service-card h3 { font-size: 1.7rem; margin-bottom: 1rem; }
+        .service-card p { color: #555; font-weight: 500; font-size: 0.95rem; }
         
-        /* Modernized Portfolio */
+        /* Portfolio */
         .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 2.5rem; }
-        .portfolio-item { background: var(--white); overflow: hidden; border-radius: var(--radius-playful); box-shadow: 0 10px 40px rgba(0,0,0,0.02); transition: 0.4s; }
-        .portfolio-item:hover { transform: scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-        .portfolio-img-wrapper { position: relative; overflow: hidden; height: 260px; }
-        .portfolio-img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease; }
-        .portfolio-item:hover .portfolio-img { transform: scale(1.08); }
-        .portfolio-tag { position: absolute; bottom: 15px; left: 15px; background: rgba(17, 17, 17, 0.8); backdrop-filter: blur(8px); color: var(--white); font-size: 0.8rem; font-weight: 700; padding: 0.4rem 1.2rem; border-radius: 50px; }
+        .portfolio-item { background: var(--white); overflow: hidden; border-radius: var(--radius-playful); box-shadow: 0 10px 40px rgba(0,0,0,0.02); }
+        .portfolio-img-wrapper { position: relative; height: 240px; }
+        .portfolio-img { width: 100%; height: 100%; object-fit: cover; }
+        .portfolio-tag { position: absolute; bottom: 15px; left: 15px; background: rgba(17, 17, 17, 0.85); backdrop-filter: blur(8px); color: var(--white); font-size: 0.8rem; font-weight: 700; padding: 0.4rem 1.2rem; border-radius: 50px; }
         .portfolio-info { padding: 2rem; }
-        .portfolio-info h4 { font-size: 1.6rem; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+        .portfolio-info h4 { font-size: 1.5rem; margin-bottom: 0.5rem; }
         .portfolio-info p { font-size: 0.95rem; color: #555; font-weight: 500; }
         
-        /* About Block - Split with soft rounded shapes */
+        /* Pure Professional About Me */
         .about-block { display: flex; align-items: center; gap: 4rem; background: var(--white); border-radius: var(--radius-playful); overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.02); }
         .about-text { padding: 5rem 4rem; flex: 1; }
-        .about-img { flex: 1; width: 50%; height: 550px; object-fit: cover; }
+        .about-img { flex: 1; width: 50%; height: 500px; object-fit: cover; }
         .about-text p { font-weight: 500; color: #444; margin-bottom: 1.5rem; font-size: 1.05rem; }
         
-        /* Playful Contact / CTA Box */
-        .contact-box { background: var(--dark-grad); color: var(--white); padding: 5rem 4rem; text-align: center; border-radius: var(--radius-playful); box-shadow: 0 20px 50px rgba(0,0,0,0.15); position: relative; }
-        .contact-box h2 { font-size: 3.5rem; margin-bottom: 1rem; letter-spacing: -1px; }
-        .contact-box p { font-size: 1.2rem; color: #BBB; margin-bottom: 3rem; font-weight: 500; }
+        /* Contact Box */
+        .contact-box { background: var(--dark-grad); color: var(--white); padding: 5rem 4rem; text-align: center; border-radius: var(--radius-playful); }
+        .contact-box h2 { font-size: 3.2rem; margin-bottom: 1rem; }
+        .contact-box p { font-size: 1.15rem; color: #BBB; margin-bottom: 3rem; font-weight: 500; }
         .contact-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-        .contact-links a { color: var(--dark); background: var(--white); padding: 1rem 2rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .contact-links a:hover { background: #FF9900; color: var(--dark); transform: translateY(-4px); }
+        .contact-links a { color: var(--dark); background: var(--white); padding: 1rem 2rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: 0.3s; }
+        .contact-links a:hover { background: #FF9900; color: var(--dark); }
         
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            .section-title { font-size: 2.3rem; }
+            .hero h1 { font-size: 2.6rem; }
+            .section-title { font-size: 2.2rem; }
             .about-block { flex-direction: column; }
-            .about-img { width: 100%; height: 320px; }
-            .about-text { padding: 3rem 2rem; }
-            .contact-box h2 { font-size: 2.4rem; }
+            .about-img { width: 100%; height: 300px; }
+            .about-text { padding: 2.5rem 1.5rem; }
+            .contact-box h2 { font-size: 2.2rem; }
             .contact-links { flex-direction: column; gap: 1rem; }
-            .price-card.featured { transform: scale(1); }
-            .price-card.featured:hover { transform: translateY(-12px) scale(1); }
         }
     </style>
 </head>
@@ -154,66 +148,87 @@
             <a href="#bundles">Ready Bundles</a>
             <a href="#services">Custom Services</a>
             <a href="#portfolio">Our Work</a>
-            <a href="#about">Our Story</a>
+            <a href="#about">About Me</a>
             <a href="#contact">Let's Talk</a>
         </div>
     </nav>
 
     <header class="hero">
-        <h1>We design marketing that makes businesses <span>go viral.</span></h1>
-        <p>Hey there, I’m Nisha Chowdhary! I build gorgeous digital presence, run high-converting ad engines, and craft custom copy assets that turn views into real, paying clients.</p>
-        <a href="#bundles" class="cta-btn">Unlock Ready Bundles 🚀</a>
+        <h1>We build premium marketing that <span>brings you customers.</span></h1>
+        <p>Hello, I’m Nisha Chowdhary. I design professional websites, manage high-performing ad campaigns, and create ready-to-use social media kits that turn local viewers into regular clients.</p>
+        <a href="#bundles" class="cta-btn">View Ready Bundles 🚀</a>
     </header>
 
     <section id="bundles" class="container">
-        <h2 class="section-title">Packers & Movers Visual Packs</h2>
-        <p class="section-subtitle">Ditch the content creation headache. Grab customized, highly engaging social media templates engineered from scratch to capture local moving leads.</p>
+        <h2 class="section-title">Packers & Movers Ready Kits</h2>
+        <p class="section-subtitle">Get professional, pre-written social media graphics and text ready to publish for your business. No design skills needed.</p>
         
         <div class="price-grid">
             <div class="price-card">
+                <div class="book-container">
+                    <div class="digital-book">
+                        <div class="book-badge">Ready Kit</div>
+                        <div class="book-title">Essential Sampler</div>
+                        <div class="book-footer">28 Posts</div>
+                    </div>
+                </div>
                 <div>
-                    <div class="post-count">📦 28 Posts Ready-To-Drop</div>
                     <h3>Essential Sampler</h3>
+                    <div class="post-count">📦 28 Total Posts Included</div>
                     <div class="cost">₹299 <span>₹999</span></div>
                     <ul class="price-features">
-                        <li><strong>Spans ALL 14 Relocation Topics</strong></li>
-                        <li>Limited to 2 Curated Posts per style</li>
-                        <li>Covers Homes, Vehicles & Offices</li>
-                        <li>Includes pre-structured captions</li>
-                        <li>Instant download, super easy setup</li>
+                        <li><strong>Includes 14 different moving topics</strong></li>
+                        <li>Get exactly 2 ready posts for each topic</li>
+                        <li>Covers House, Bike, and Car shifting</li>
+                        <li>Includes pre-written text captions</li>
+                        <li>Instant access on your phone or PC</li>
                     </ul>
                 </div>
-                <a href="https://wa.me/917861842159?text=Hi%20Nisha,%20I%20want%20to%20buy%20the%20Essential%20Sampler%20Moving%20Bundle%20for%20Rs%20299" class="bundle-btn" target="_blank">Grab Package 1 ✨</a>
+                <a href="https://wa.me/917861842159?text=Hi%20Nisha,%20I%20want%20to%20buy%20the%20Essential%20Sampler%20Moving%20Bundle%20for%20Rs%20299" class="bundle-btn" target="_blank">Buy Package 1 ✨</a>
             </div>
 
             <div class="price-card featured">
                 <span class="badge">🔥 Most Popular Choice</span>
+                <div class="book-container">
+                    <div class="digital-book">
+                        <div class="book-badge">Growth Pack</div>
+                        <div class="book-title">Business Growth</div>
+                        <div class="book-footer">70 Posts</div>
+                    </div>
+                </div>
                 <div>
-                    <div class="post-count">🚀 70 Master Graphics</div>
                     <h3>Business Growth</h3>
+                    <div class="post-count">🚀 70 Total Posts Included</div>
                     <div class="cost">₹499 <span>₹1,999</span></div>
                     <ul class="price-features">
-                        <li><strong>Spans ALL 14 Relocation Topics</strong></li>
-                        <li>Expanded to 5 Posts per service block</li>
-                        <li>Deep mix of home, cars & commercial</li>
-                        <li>Packed with shareable packing hacks</li>
-                        <li>Includes viral localized moving memes</li>
+                        <li><strong>Includes 14 different moving topics</strong></li>
+                        <li>Get exactly 5 ready posts for each topic</li>
+                        <li>Covers House, Office, Vehicle shifting</li>
+                        <li>Includes helpful packing tips posts</li>
+                        <li>Includes funny local moving memes</li>
                     </ul>
                 </div>
-                <a href="https://wa.me/917861842159?text=Hi%20Nisha,%20I%20want%20to%20buy%20the%20Business%20Growth%20Moving%20Bundle%20for%20Rs%20499" class="bundle-btn" target="_blank">Secure Package 2 ⚡</a>
+                <a href="https://wa.me/917861842159?text=Hi%20Nisha,%20I%20want%20to%20buy%20the%20Business%20Growth%20Moving%20Bundle%20for%20Rs%20499" class="bundle-btn" target="_blank">Buy Package 2 ⚡</a>
             </div>
 
             <div class="price-card">
+                <div class="book-container">
+                    <div class="digital-book">
+                        <div class="book-badge">Master Box</div>
+                        <div class="book-title">Ultimate Vault</div>
+                        <div class="book-footer">140 Posts</div>
+                    </div>
+                </div>
                 <div>
-                    <div class="post-count">💎 140+ Complete Asset Vault</div>
-                    <h3>Ultimate Master Kit</h3>
+                    <h3>Ultimate Vault</h3>
+                    <div class="post-count">💎 140 Total Posts Included</div>
                     <div class="cost">₹999 <span>₹3,499</span></div>
                     <ul class="price-features">
-                        <li><strong>Spans ALL 14 Relocation Topics</strong></li>
-                        <li>Full Unrestricted Access (10 Posts each)</li>
-                        <li>Unlocks premium Hospital & Store lines</li>
-                        <li>Full caption archive & hashtag engine</li>
-                        <li><strong>FREE BONUS:</strong> Printable Checklist Lead Magnet</li>
+                        <li><strong>Includes 14 different moving topics</strong></li>
+                        <li>Get exactly 10 ready posts for each topic</li>
+                        <li>Unlocks premium Hospital & Shop shifting</li>
+                        <li>Full collection of hashtag sets</li>
+                        <li><strong>FREE BONUS:</strong> Printable Moving Day Checklist</li>
                     </ul>
                 </div>
                 <a href="https://wa.me/917861842159?text=Hi%20Nisha,%20I%20want%20to%20buy%20the%20Ultimate%20Master%20Moving%20Vault%20for%20Rs%20999" class="bundle-btn" target="_blank">Unlock the Vault 💎</a>
@@ -222,59 +237,59 @@
     </section>
 
     <section id="services" class="container">
-        <h2 class="section-title">Bespoke Agency Services</h2>
-        <p class="section-subtitle">Need something custom built specifically for your brand? From launching heavy-duty ad campaigns to structural branding, I can handle it completely.</p>
+        <h2 class="section-title">Custom Agency Services</h2>
+        <p class="section-subtitle">Need personalized marketing tailored specifically for your brand? I handle complete digital setups from scratch.</p>
         <div class="services-grid">
             <div class="service-card">
                 <span class="icon">📈</span>
-                <h3>Paid Advertising & Lead Generation</h3>
-                <p>Stop guessing with boost posts. Get precise, high-conversion Google Search Ads and Meta campaigns mapped out and actively scaled to pull in high-value business leads.</p>
+                <h3>Google & Meta Advertising</h3>
+                <p>Stop wasting money on random promotions. Get professional Google search and social media advertisements set up correctly to bring verified customer calls to your phone.</p>
             </div>
             <div class="service-card">
                 <span class="icon">📍</span>
-                <h3>Local Domination & Registration</h3>
-                <p>Own your local city radius. I completely optimize your Google My Business maps architecture for search rankings and handle structural Udhyam Aadhaar corporate registrations smoothly.</p>
+                <h3>Local Google Maps Setup</h3>
+                <p>Get found easily by local clients in your city. I completely optimize your Google My Business maps profile and handle corporate Udyam Aadhaar registrations.</p>
             </div>
             <div class="service-card">
                 <span class="icon">🎨</span>
-                <h3>High-End Design & Development</h3>
-                <p>Look like a market leader. I design custom social media brand styles, striking promotional assets, corporate logo design systems, and rapid, high-performance web spaces.</p>
+                <h3>Branding & Web Design</h3>
+                <p>Make your company look big and trustworthy. I create striking logo assets, custom corporate graphics profiles, and high-speed business landing pages.</p>
             </div>
         </div>
     </section>
 
     <section id="portfolio" class="container">
-        <h2 class="section-title">What We've Built Recently</h2>
-        <p class="section-subtitle">A sneak preview into the visual quality and premium conversion metrics we bring to our clients.</p>
+        <h2 class="section-title">Our Recent Work</h2>
+        <p class="section-subtitle">A quick preview of the results and design quality we build for service business owners.</p>
         <div class="portfolio-grid">
             <div class="portfolio-item">
                 <div class="portfolio-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80" alt="Website UI Preview" class="portfolio-img">
-                    <span class="portfolio-tag">Web Development</span>
+                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80" alt="Website UI" class="portfolio-img">
+                    <span class="portfolio-tag">Web Design</span>
                 </div>
                 <div class="portfolio-info">
-                    <h4>High-Conversion Corporate Spaces</h4>
-                    <p>Ultra-responsive, clean layout setups designed with instant WhatsApp scheduling triggers.</p>
+                    <h4>Responsive Business Landing Pages</h4>
+                    <p>Clean, mobile-optimized designs built with fast-action buttons for instant customer WhatsApp chats.</p>
                 </div>
             </div>
             <div class="portfolio-item">
                 <div class="portfolio-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=600&q=80" alt="Google Ads Funnels" class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=600&q=80" alt="Google Ads Results" class="portfolio-img">
                     <span class="portfolio-tag">Lead Generation</span>
                 </div>
                 <div class="portfolio-info">
-                    <h4>Hyper-Targeted Google Search Funnels</h4>
-                    <p>Ad structures set up across regional keywords resulting in an instant spike in verified consumer calls.</p>
+                    <h4>High-ROI Local Ad Campaigns</h4>
+                    <p>Targeted local keyword systems built to increase direct consumer call inquiries while reducing ad spend.</p>
                 </div>
             </div>
             <div class="portfolio-item">
                 <div class="portfolio-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?auto=format&fit=crop&w=600&q=80" alt="Moving Kit Previews" class="portfolio-img">
-                    <span class="portfolio-tag">Social Media Branding</span>
+                    <img src="https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?auto=format&fit=crop&w=600&q=80" alt="Social Media Templates" class="portfolio-img">
+                    <span class="portfolio-tag">Social Branding</span>
                 </div>
                 <div class="portfolio-info">
-                    <h4>Packers & Movers Content Kits</h4>
-                    <p>Consistent typography and color structures mapped out to signal authority and premium safety standard.</p>
+                    <h4>Packers & Movers Content Vaults</h4>
+                    <p>Uniform colors and professional fonts laid out to build high authority and security on social pages.</p>
                 </div>
             </div>
         </div>
@@ -283,20 +298,20 @@
     <section id="about" class="container">
         <div class="about-block">
             <div class="about-text">
-                <h2 style="font-size: 3rem; margin-bottom: 1.5rem; letter-spacing: -1px;">The Heart Behind <span>Anka Aura</span></h2>
-                <p>Anka Aura Digital isn’t an automated, cold agency engine. It is a highly dedicated, human project born directly out of love and absolute professional pride. I named this firm directly after my absolute rock-solid cornerstones: my husband, Ankit, and my lifelong closest friend, Aanishka.</p>
-                <p>When you sign up with me, you are working directly with me, Nisha. I run this space to lift the frustrating digital weight off your plate, building your commercial presence with the exact same focus and long-term love that I give to my loved ones.</p>
+                <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem; letter-spacing: -1px;">About <span>Anka Aura Digital</span></h2>
+                <p>Anka Aura Digital is a results-driven digital marketing agency committed to helping service businesses grow online. We eliminate the frustration of content creation and complicated digital setups, offering transparent, highly effective systems that bring in consistent clients.</p>
+                <p>When you partner with us, you work directly with me, Nisha. I focus on handling your brand appearance, local search presence, and traffic conversion systems so you can fully focus on managing your incoming corporate operations seamlessly.</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Creative Studio" class="about-img">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office Space" class="about-img">
         </div>
     </section>
 
     <section id="contact" class="container">
         <div class="contact-box">
-            <h2>Let’s make something epic together! 🙌</h2>
-            <p>Ready to lock in your comprehensive content vaults or spin up a heavy custom lead generation setup? Drop me a direct message right now!</p>
+            <h2>Let's launch your project! 🙌</h2>
+            <p>Ready to secure your Packers & Movers post package or discuss a custom lead campaign? Message me directly.</p>
             <div class="contact-links">
-                <a href="tel:7861842159">📞 Call Me: +91 7861842159</a>
+                <a href="tel:7861842159">📞 Call: +91 7861842159</a>
                 <a href="https://wa.me/917861842159" target="_blank">💬 WhatsApp Chat</a>
                 <a href="mailto:offiialwork7676@gmail.com">✉️ Email Nisha</a>
             </div>
